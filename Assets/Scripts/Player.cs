@@ -13,15 +13,18 @@ public class Player : MonoBehaviour
     private float playerSpeed;
     private float horizontalInput;
     private float verticalInput;
+    private float verticalMidScreen;
 
     private float horizontalScreenLimit = 9.5f;
-    private float verticalScreenLimit = 6.5f;
+    private float verticalScreenUpperLimit = 5.5f; //(JW) Found value through testing
+    private float verticalScreenBottomLimit = -3.5f; //(JW) Found value through testing
 
     public GameObject bulletPrefab;
 
     void Start()
     {
         playerSpeed = 6f;
+        verticalMidScreen = verticalScreenUpperLimit - ((verticalScreenUpperLimit - verticalScreenBottomLimit) / 2); //(JW)
         //This function is called at the start of the game
         
     }
@@ -31,6 +34,7 @@ public class Player : MonoBehaviour
         //This function is called every frame; 60 frames/second
         Movement();
         Shooting();
+        Testing(); // (JW)
 
     }
 
@@ -55,10 +59,24 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x * -1, transform.position.y, 0);
         }
-        //Player leaves the screen vertically
-        if(transform.position.y > verticalScreenLimit || transform.position.y <= -verticalScreenLimit)
+        // (JW) Player tries leaves the screen vertically at the bottom, keep at bottom of screen
+        if(transform.position.y <= verticalScreenBottomLimit)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y * -1, 0);
+            transform.position = new Vector3(transform.position.x, verticalScreenBottomLimit, 0);
+        }
+        // (JW) Player tries go back midscreen, keep at midscreen
+        if(transform.position.y >= verticalMidScreen)
+        {
+            transform.position = new Vector3(transform.position.x, verticalMidScreen, 0);
+        }
+    }
+
+    //(JW) Can be put in if any testing needed
+    void Testing() 
+    {
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            Debug.Log(transform.position.y);
         }
     }
 
