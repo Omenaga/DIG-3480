@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 619908764}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -768,6 +768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyOnePrefab: {fileID: 9207418728420716899, guid: 57d7aa5182902e24cb707961f14f52d5, type: 3}
   enemyTwoPrefab: {fileID: 5310295575715148920, guid: 1de7e551c52f6e048a5bb89367e2b2bf, type: 3}
+  coinPrefab: {fileID: 9207418728420716899, guid: e64c46695a3cf87439f576b888636160, type: 3}
 --- !u!4 &2142600587
 Transform:
   m_ObjectHideFlags: 0
