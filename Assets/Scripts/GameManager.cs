@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("CreateEnemyOne", 1, 2);
         InvokeRepeating("CreateEnemyTwo", 2, 4);
         InvokeRepeating("CreateCoin", 5, 10);
-        InvokeRepeating("CreateShield", 10, 15);
+        InvokeRepeating("CreateShield", 7, 13);
     }
 
     // Update is called once per frame

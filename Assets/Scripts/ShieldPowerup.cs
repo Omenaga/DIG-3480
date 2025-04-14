@@ -3,7 +3,7 @@ using UnityEngine;
 public class ShieldPowerUp : MonoBehaviour
 {
     public float lifetime = 3f;
-    public float shieldDuration = 5f;
+    public float shieldDuration = 3f;
 
     void Start()
     {

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6653582460680841150}
   - component: {fileID: 1174548904905005063}
   - component: {fileID: 7401671801895044471}
-  - component: {fileID: -7381610938670011120}
+  - component: {fileID: 6876157906585241893}
   - component: {fileID: 5171294347723568141}
   m_Layer: 0
   m_Name: ShieldObject
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dc043ff69871a649988b3caa7727fe0, type: 2}
+  - {fileID: 2100000, guid: 76ba85066759f8f4f993a5d591a746c8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,7 +110,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7381610938670011120
+--- !u!114 &6876157906585241893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,10 +119,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9207418728420716899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dce3bf5e0b539f94eba49f34fbe90d62, type: 3}
+  m_Script: {fileID: 11500000, guid: d08de8731f3cc624eb9197a838e24d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shieldVisual: {fileID: 0}
+  lifetime: 3
+  shieldDuration: 5
 --- !u!54 &5171294347723568141
 Rigidbody:
   m_ObjectHideFlags: 0
