@@ -14,16 +14,6 @@ public class Powerup : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public AudioClip shieldPowerUpClip;
-    public AudioClip shieldPowerDownClip;
-
-    private AudioSource audioSource;
-
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-
     public void ActivateShield(float duration)
     {
         if (shieldVisual != null)
