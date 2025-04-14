@@ -4,6 +4,15 @@ public class Powerup : MonoBehaviour
 {
     public GameObject shieldVisual;
     //private bool shieldActive = false;
+    public AudioClip shieldPowerUpClip;
+    public AudioClip shieldPowerDownClip;
+
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public AudioClip shieldPowerUpClip;
     public AudioClip shieldPowerDownClip;
