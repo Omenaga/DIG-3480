@@ -4,6 +4,7 @@ public class Powerup : MonoBehaviour
 {
     public GameObject shieldVisual;
     //private bool shieldActive = false;
+
     public AudioClip shieldPowerUpClip;
     public AudioClip shieldPowerDownClip;
 
