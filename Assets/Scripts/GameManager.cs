@@ -7,12 +7,16 @@ public class GameManager : MonoBehaviour
 
     public GameObject enemyOnePrefab;
     public GameObject enemyTwoPrefab;
+    public GameObject coinPrefab;
+    public GameObject shieldPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("CreateEnemyOne", 1, 2);
         InvokeRepeating("CreateEnemyTwo", 2, 4);
+        InvokeRepeating("CreateCoin", 5, 10);
+        InvokeRepeating("CreateShield", 7, 13);
     }
 
     // Update is called once per frame
@@ -36,5 +40,13 @@ public class GameManager : MonoBehaviour
         Instantiate(enemyTwoPrefab, new Vector3(spawnX, 6.5f, 0), Quaternion.identity);
     }
 
-    
+    void CreateCoin()
+    {
+        Instantiate(coinPrefab, new Vector3(-9.5f, Random.Range(-3.5f, 1f), 0), Quaternion.identity);
+    }
+
+    void CreateShield()
+    {
+        Instantiate(shieldPrefab, new Vector3(Random.Range(-8f, 8f), Random.Range(-3.5f, 1f), 0), Quaternion.identity);
+    }
 }

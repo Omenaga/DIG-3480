@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.T))
         {
-            Debug.Log(transform.position.y);
+            Debug.Log(transform.position.x);
         }
     }
 
